@@ -14,6 +14,12 @@ fn floatExample() {
     let y: f32 = 3.0; // f32
 }
 
+// Function and return values
+
+fn five() -> i32 {
+    5
+}
+
 // Numeric Operations
 
 fn main() {
@@ -63,5 +69,17 @@ fn main() {
 
     let c = [3; 5]; // let c = [3, 3, 3, 3, 3];
 
+
+    // Statements and Expressions
+
+    
+    let z = {
+        let d = 3;
+        d + 1
+    };
+
+    println!("The value of z is: {z}");
+
+    // Loops Labels to Disambiguate between multiple loops
 
 }
