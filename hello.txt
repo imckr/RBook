@@ -1,0 +1,18 @@
+use std::fs::File;
+use std::io::{self, Write, Read};
+
+fn main() -> io::Result<()> {
+    // Create and write to a file
+    let mut file = File::create("hello.txt")?;
+    file.write_all(b"Hello, world!")?;
+
+    // Read the file
+    let mut file = File::open("hello.txt")?;
+    let mut contents = String::new();
+    file.read_to_string(&mut contents)?;
+
+    // Print the contents
+    println!("File contents: {}", contents);
+
+    Ok(())
+}
